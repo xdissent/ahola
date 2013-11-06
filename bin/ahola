@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var ahola = require('../index.js'),
+  server = ahola();

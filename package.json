@@ -1,0 +1,29 @@
+{
+  "name": "ahola",
+  "version": "0.0.0",
+  "description": "DNS proxy with mDNS support",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xdissent/ahola.git"
+  },
+  "keywords": [
+    "dns",
+    "mdns",
+    "proxy",
+    "avahi",
+    "bonjour"
+  ],
+  "author": "Greg Thornton <xdissent@me.com> (http://xdissent.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xdissent/ahola/issues"
+  },
+  "dependencies": {
+    "dnsserver": "git+https://github.com/xdissent/dnsserver.js.git#raw",
+    "node-dbus": "git+https://github.com/Motorola-Mobility/node-dbus.git"
+  }
+}
