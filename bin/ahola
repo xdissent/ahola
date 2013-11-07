@@ -1,4 +1,23 @@
 #!/usr/bin/env node
 
-var ahola = require('../index.js'),
-  server = ahola();
+var path = require('path'),
+  ahola = require('../index.js'),
+  config = {
+    servers: ['8.8.8.8', '4.4.4.4'],
+    host: '0.0.0.0',
+    port: 53,
+    ttl: 900,
+    dbus: 'unix:path=/var/run/dbus/system_bus_socket'
+  };
+
+if (process.argv.length > 2) {
+  var overrides = require(path.resolve(process.argv[2]));
+  Object.keys(overrides).forEach(function (key) {
+    config[key] = overrides[key];
+  });
+}
+
+process.on('SIGINT', process.exit);
+process.on('SIGTERM', process.exit);
+
+ahola(config);

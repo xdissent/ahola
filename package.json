@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "DNS proxy with mDNS support",
   "main": "index.js",
+  "bin": "./bin/ahola",
   "scripts": {
     "test": "mocha"
   },
@@ -25,5 +26,8 @@
   "dependencies": {
     "dnsserver": "git+https://github.com/xdissent/dnsserver.js.git#raw",
     "node-dbus": "git+https://github.com/Motorola-Mobility/node-dbus.git"
+  },
+  "devDependencies": {
+    "debug": "~0.7.3"
   }
 }
